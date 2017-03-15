@@ -12,7 +12,7 @@
         <tr name="js-fib">
           <td>
             <button type="button" name="js-fib-button">With JS</button>
-            <script type="text/javascript" src="/static/fib.js"></script>
+            <script type="text/javascript" src="/fib.js"></script>
             <script>
               const ITER = 50000
               registerHandler = (type, fibFun) => {
@@ -39,7 +39,7 @@
           <td>
             <button type="button" name="wasm-fib-button">With WASM</button>
             <script type="text/javascript">
-              fetch('/static/fib.wasm').then(response =>
+              fetch('/fib.wasm').then(response =>
                 response.arrayBuffer()
               ).then(bytes =>
                 WebAssembly.instantiate(bytes, {})
